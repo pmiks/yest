@@ -1,0 +1,286 @@
+.testpage{ padding-top: 0; width: 100%; max-width: 140vh;min-width: 60vw;text-align:  center; justify-self:center; overflow: visible; margin-bottom: 90px;}
+
+.testpage>.testHeaderDefault{
+  grid-area:header;
+  display: grid; grid-template-columns:  1fr auto; margin: 4vh 0 2vh 0; background: gray;
+  padding: 2px 50px; color: white; opacity: 0.8; align-items: center;grid-gap: 50px;
+  justify-self:stretch;
+}
+.testpage>.testHeaderDefault>.name{ font-size: 1.8em; font-weight: bold; text-align: left; }
+.testpage>.testHeaderDefault>.time{ font-size: 1.7em; font-weight: bold; text-align: right;}
+
+.testpage>.HelpTools{display: none;}
+
+.testpage>.pagenatorDefault{
+  background-color: transparent;
+  display: inline-flex;
+  justify-self:right;
+  font-size: 1vmax;
+  /* grid-template-columns: repeat(auto-fill,minmax(min-content,20px));  */
+  grid-template-columns: repeat(auto-fill,3em);
+  grid-column: 2;
+}
+
+.testpage>.pagenatorDefault >.pageItem{
+    /* display: grid;  */
+    justify-self:stretch;
+    justify-items:right;
+    margin-right:  0.3vw;
+    align-self: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #000000;
+    background-color: white;
+    border:1px solid lightgray;
+    cursor:pointer;
+    grid-template-areas: "num value";
+    padding: 0.1vw;
+    width: 2em;
+  }
+.testpage>.pagenatorDefault >.pageItem:hover{color: #ffffff;  background-color: grey;   border-color:  grey;  }
+.testpage>.pagenatorDefault >.pageItem>.num{grid-area: num; justify-self:center;justify-items:center;display:grid; }
+.testpage>.pagenatorDefault >.pageItem>.value{grid-area: value;display: none;}
+.testpage>.pagenatorDefault >.notclicable:hover{ color: black;  background-color: white; border-color:  white; cursor: default;}
+.testpage>.pagenatorDefault >.selectedPageNumber{ color: #ffffff;  background-color: #d46d23; border-color:  grey;  }
+
+/* Блокирующий экран--------------------------------------*/
+.testpage>.BlockLayer{ right: 0; left:0; top:0; bottom:0; display: block;  position:fixed; background-color: white;
+  z-index: 1;  opacity: 0;  align-content: center;  align-items: center;  align-self: center;}
+
+/* Результат вопроса--------------------------------------*/
+ .testpage>.QuestionResultDefault{
+  background-color: white;
+  border: 1vmin solid green;
+  padding: 2vmax;
+  z-index: 2;
+  display: grid;
+  grid-template-areas:
+    "result result"
+    "stat stat"
+    "wronganswertext wronganswertext"
+    "rightanswertext rightanswertext"
+    "picquestion comment"
+    "btnrepeat btngomainpage";
+  grid-template-columns: repeat(2,minmax(0,max-content));
+  position: absolute;
+  top: 50%;  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+  box-shadow: 0 0 5vw rgba(0,0,0,0.5);
+  color:black;
+  font-weight: bold;
+  width: 90vw;
+  grid-column-gap: 1em;
+  max-width: 1024px;
+  /* max-height: 70vh; */
+  align-self: center;
+  font-size: 2.3vmin;
+}
+
+.testpage>.wrong{ border: 1vmin solid red;}
+
+.testpage>.QuestionResultDefault>.picquestion{
+  grid-area: picquestion;
+  max-height: 50vh;
+  max-width: 30vw;
+  align-self: center;
+}
+
+.testpage>.QuestionResultDefault>.textquestion{grid-area:textquestion;}
+.testpage>.QuestionResultDefault>.picrightanswer{grid-area:picrightanswer;}
+.testpage>.QuestionResultDefault>.textrightanswer{grid-area:textrightanswer;}
+.testpage>.QuestionResultDefault>.picwronganswer{grid-area:picwronganswer;}
+.testpage>.QuestionResultDefault>.textwromganswer{grid-area:textwromganswer;}
+.testpage>.QuestionResultDefault>.result{ grid-area: result; font-size: 2.2em;  padding-bottom: 1vh;}
+.testpage>.QuestionResultDefault>.result::after{content: attr(data-result);}
+.testpage>.QuestionResultDefault>.stat{ grid-area: stat; font-size: 1.5em; padding-bottom: 1vh;border-bottom: 1px dotted grey; margin-bottom: 10px}
+.testpage>.QuestionResultDefault>.btnrepeat{  grid-area: btnrepeat;}
+.testpage>.QuestionResultDefault>.btngomainpage{  grid-area: btngomainpage;}
+.testpage>.QuestionResultDefault>.comment{
+  grid-area: comment;
+  text-align:justify;
+  padding: 2vmin;
+  background-color: white;
+  font-weight: normal;
+  color:black;
+  border-radius: 0;
+  align-self:stretch;
+  max-height: 50vw;
+  overflow-y: scroll;
+}
+.testpage>.QuestionResultDefault>.rightanswertext{grid-area:rightanswertext;}
+.testpage>.QuestionResultDefault>.wronganswertext{grid-area: wronganswertext;}
+.testpage>.QuestionResultDefault>.rightanswerpic{display: none;grid-area: rightanswerpic;}
+.testpage>.QuestionResultDefault>.wronganswerpic{display: none;grid-area: wronganswerpic;}
+
+
+  /* Блок вопроса--------------------------------------*/
+  .testpage>.rekField2{
+        display:block;
+        position:fixed;
+        bottom: 1vh;
+        left: 1vw;
+        right: 1vw;
+        padding: 0;
+        justify-items:center;
+        justify-self:stretch;
+        height: 600px;
+        background-color: transparent;
+        /* border: 1px solid black; */
+        text-align: center;
+  }
+
+.testpage>.rekField{
+      display:block;
+      position:fixed;
+      bottom: 1vh;
+      left: 1vw;
+      right: 1vw;
+      padding: 0;
+      justify-items:center;
+      justify-self:stretch;
+      height: 90px;
+      background-color: transparent;
+      /* border: 1px solid black; */
+      text-align: center;
+}
+
+.testpage>.rekField:hover{
+  background-color: rgba(0,0,0,0.1);
+}
+
+.testpage .questionDefault{
+      padding: 2vmax; margin-top: 2vh;
+      justify-self:stretch;
+      color:black;  background-color: white;
+      border: 1px dotted grey;
+      box-shadow: 0 0 50px rgba(0,0,0,0.5);
+      font-size: 1vmin;
+      display:grid;
+      justify-items:center;
+      grid-template-areas:  "questionpic "  "textquestion "   "answerlist"     "answerinputitem" }
+  /* Поле вопроса--------------------------------------*/
+.testpage .questionDefault>.questionitemtext{grid-area:textquestion; align-self: center;font-size: 3.5em}
+.testpage .questionDefault>.questionitempic{grid-area:questionpic;max-height: 30vh;max-width: 70vw;border: 1px solid gray;}
+  /* Поле ответа--------------------------------------*/
+.testpage .questionDefault>.answerlist{grid-area:answerlist; display: grid; grid-template-columns: 1fr; grid-gap: 1em; background-color: inherit; justify-self:stretch;margin-top: 3vh}
+
+.testpage .questionDefault>.CommentShow{display: none;}
+
+.testpage .questionDefault>.answerlist >.answeritem{
+    display: grid;
+    text-align: left;
+    padding: 0.4vh 3vw;
+    border: 1px solid red;
+    color:white; background-color: black;
+    font-size: 3em; font-weight: normal;
+    align-items: center;
+    grid-gap: 0.2em;
+    grid-template-columns: repeat(3,minmax(min-content,max-content));
+    grid-template-areas: "nn pic answertext";
+    justify-self: stretch;
+    min-height: 2em;
+  }
+.testpage .questionDefault>.answerlist >.answeritem>.pic{grid-area:pic;}
+.testpage .questionDefault>.answerlist >.answeritem>.nn{grid-area:nn; }
+.testpage .questionDefault>.answerlist >.answeritem>.answertext{grid-area:answertext;}
+.testpage .questionDefault>.answerlist >.item{}
+.testpage .questionDefault>.answerlist >.answeritem:hover{ color:black; background-color: #858181; box-shadow:  0 0 25px rgba(0,130,255,1);}
+.testpage .questionDefault>.answerlist >.itemselected{ color:#ffffff;  background-color: blue;  box-shadow: 0 0 25px rgba(255,0,0,1);}
+.testpage .questionDefault>.answerlist >.itemselected:hover{ color:#000000; background-color: #858181; box-shadow: 0 0 25px rgba(255,0,0,1);}
+.testpage .questionDefault>.answerlist >.wrongitem{ background-color: red; box-shadow: 0 0 25px rgba(255,0,0,1);}
+.testpage .questionDefault>.answerlist >.rightitem{ background-color: green; box-shadow: 0 0 25px rgba(0,255,0,1); }
+
+  /* Поле ввода ответа-------------------------------------*/
+.testpage .questionDefault>.answerinputitem{grid-area:answerinputitem; font-family: "Arial"; background-color: lightgray;  color:black;  padding: 20px;justify-self:stretch; display: grid;
+                             grid-template-areas: "answerinput answerbutton"; margin-top: 10vh;border-radius: 15px;grid-template-rows: minmax(min-content,max-content);align-items: stretch;
+                             grid-column-gap: 1em;}
+.testpage .questionDefault>.answerinputitem>.answerinput{grid-area:answerinput; font-size: 4em; color:inherit; border-radius: 15px; background-color: inherit;text-align: center; align-self: center; border: 3px solid gray;}
+.testpage .questionDefault>.answerinputitem>.answerbutton{display: grid;grid-area:answerbutton; align-self: stretch; justify-self:stretch; border: 3px solid gray;border-radius: 15px; align-items: center;font-size: 3em;cursor: pointer;background-color: #d46d23}
+.testpage .questionDefault>.answerinputitem>.answerbutton:hover{background-color: orange;border-color: black;}
+  /* -------------------------------------------------------*/
+
+  /*Форма результата теста*/
+.testpage>.testres{
+    display: grid;
+    grid-row-gap: 1vmin;
+    grid-template-areas:
+      "th th" "ts tsp" "trs trs" "tss tss" "tsi tsi" "sns sns" "btnrepeat btngomainpage" "er er";
+    color: black;
+    padding: 1vmin;
+    box-shadow: 0 0 50px rgba(55,55,55,1);
+    background-color: white;
+    margin: 30px;
+    font-size: 1vw;
+}
+
+.testpage>.testres>.header      {grid-area:th;font-size: 3em; font-weight: 700;justify-self:center; }
+.testpage>.testres>.stat        {grid-area:ts;font-size: 2em; font-weight: 700; justify-self:right;}
+.testpage>.testres>.statpercent {grid-area:tsp;  font-size: 2em; font-weight: 700;justify-self:left;}
+.testpage>.testres>.statscore   {grid-area:tss;  font-size: 2em; font-weight: 700;justify-self:center;display: none;}
+.testpage>.testres>.statimg     {grid-area:tsi;  font-size: 2em; font-weight: 700;}
+.testpage>.testres>.resumeString{grid-area:trs; font-size: 3em; font-weight: 700;}
+
+.testpage>.testres>.btnrepeat{
+ grid-area: btnrepeat;
+ display: grid;
+ color: white;
+ align-self: stretch;
+ align-items: center;
+ justify-self:stretch;
+ margin: 1vmin;
+ background-color: orange;
+ height: 3em;
+ font-size: 1.5em;
+ border: 1px solid gray;
+}
+.testpage>.testres>.btnrepeat:hover{background-color: green;}
+.testpage>.testres> .btngomainpage{
+  grid-area: btngomainpage;
+  display: grid;
+  color: white;
+  align-self: stretch;
+  align-items: center;
+  justify-self:stretch;
+  margin: 1vmin;
+  background-color: orange;
+  height: 3em;
+  font-size: 1.5em;
+  border: 1px solid gray;
+}
+.testpage>.testres>.btngomainpage:hover{background-color: green;}
+
+.testpage>.testres>.snsharing   {grid-area:sns; font-size: 3em; font-weight: 700;margin-bottom: 5vh}
+.testpage>.testres>.errors      { grid-area:er; margin-top: 10vh;}
+.testpage>.hide{display: none;}
+.testpage>.testres>.errors>.item{
+    grid-template-areas:
+      "n qi q  q"
+      "n qi ra wa" ;
+    grid-template-columns: 2em 8em 1fr 1fr;
+    background-color: orange;
+    padding: 5px;
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 1vmin;
+    justify-self:stretch;
+    margin-top: 1vmin;
+    font-size: 1.7em;
+  }
+
+.testpage>.testres>.errors>.item>.num      { grid-area: n;  width: 2em; }
+.testpage>.testres>.errors>.item>.qimg     { grid-area: qi;  width: 8em;  justify-self: left;  align-self:  center;}
+.testpage>.testres>.errors>.item>.questtext{ grid-area: q;  background-color: inherit;}
+.testpage>.testres>.errors>.item>.rightresult{ grid-area: ra; padding: 1vmin; text-align: left; background-color: green; color: white; }
+.testpage>.testres>.errors>.item>.wrongresult{  grid-area: wa; padding: 1vmin; text-align: left; background-color: red; color: white; }
+.testpage>.testres>.errors img{ width: 7em;}
+.testpage>.testres>.errors>.item>.statres{  display: inline;  visibility:visible;}
+
+.testpage .social_icon{}
+
+.testpage .social_icon img{
+  width: 3vmax;
+  height: 3vmax;
+  max-width: 40px;
+  max-height: 40px;
+}

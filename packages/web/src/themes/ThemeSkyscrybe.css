@@ -1,0 +1,73 @@
+/* Тема небоскребы-------------------------------------*/
+.testpage_0001{ padding-top: 0;
+max-width: 146vh;
+  /* max-width: 153vh; */
+  /* width: 100vw; */
+  min-width: 80vw;
+  position: relative;
+  font-size: 1vmin;align-self: stretch;
+  text-align:  center;
+  justify-self:center;
+  justify-items:stretch;
+  overflow: visible;
+  align-self: stretch;
+  margin-bottom: 0;
+  height: 93vh;
+
+}
+
+/* Блок вопроса--------------------------------------*/
+.testpage_0001 .questionDefault{
+    margin: 5vmax;
+    padding: 2vh; margin-top: 4vh;
+    max-width: 1280px;
+    bottom:  10vh;
+    color:black;  background-color: white;
+    border: 1px dotted grey; border-radius: 0px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    display:grid;
+    justify-items:center;
+    font-size: 1vmin;
+    }
+@media (orientation: landscape) { .testpage_0001 .questionDefault{  grid-column-gap: 2vh;grid-template-areas:  "questionpic answerlist"  "textquestion answerlist" "answerinputitem answerinputitem";  } }
+@media (orientation: portrait) { .testpage_0001 .questionDefault{  grid-template-columns: 1fr; grid-template-areas:  "questionpic" "answerlist" "answerinputitem"  ;  grid-row-gap: 2em;  }
+}
+/* Поле вопроса--------------------------------------*/
+.testpage_0001 .questionDefault>.questionitemtext{grid-area:textquestion; align-self: center;font-size: 3em; }
+.testpage_0001 .questionDefault>.questionitempic{grid-area:questionpic;max-height: 50vh;max-width: 40vw;}
+/* Поле ответа--------------------------------------*/
+.testpage_0001 .questionDefault>.answerlist{grid-area:answerlist; display: grid; grid-template-columns: 1fr; grid-row-gap:1em; background-color: inherit; justify-self:stretch;margin: 0;}
+.testpage_0001 .questionDefault>.answerlist >.answeritem{
+  text-align: left;
+  padding: 0.4vh 2vw;
+  border: 1px solid red;
+  color:black; background-color: #dcdde0;
+  font-size: 3.3em; font-weight: normal;
+  display: grid;
+  grid-column-gap: 0.3em;
+  grid-template-columns: repeat(2,minmax(min-content,max-content)) 1fr;
+  grid-template-areas: "nn pic answertext";
+  justify-self: stretch;
+  justify-items: stretch;
+  align-items: center;
+  align-self:stretch;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.testpage_0001 .questionDefault>.answerlist >.answeritem>.pic{grid-area:pic;}
+.testpage_0001 .questionDefault>.answerlist >.answeritem>.nn{grid-area:nn;}
+.testpage_0001 .questionDefault>.answerlist >.answeritem>.answertext{grid-area:answertext;}
+.testpage_0001 .questionDefault>.answerlist >.item{}
+.testpage_0001 .questionDefault>.answerlist >.answeritem:hover{ color:black; background-color: #858181; box-shadow:  0 0 2vmax rgba(0,130,255,1);
+  /* transform: translate(-100px, 5px) perspective(600px) rotateY(-20deg) ; */
+    transform: scale(1.05);
+}
+.testpage_0001 .questionDefault>.answerlist >.itemselected{ color:#ffffff;  background-color: blue;  box-shadow: 0 0 2vmax rgba(255,0,0,1);}
+.testpage_0001 .questionDefault>.answerlist >.itemselected:hover{ color:#000000; background-color: #858181; box-shadow: 0 0 2vmax rgba(255,0,0,1);}
+.testpage_0001 .questionDefault>.answerlist >.wrongitem{ background-color: red; box-shadow: 0 0 2vmax rgba(255,0,0,1);}
+.testpage_0001 .questionDefault>.answerlist >.rightitem{ background-color: green; box-shadow: 0 0 2vmax rgba(0,255,0,1); }
+.testpage_0001 .questionDefault>.answerinputitem{grid-area:answerinputitem; font-family: "Arial"; background-color: #211f1f;  color:#ffffff;  padding: 1vmax;justify-self:stretch; display: grid;
+                           grid-template-areas: "answerinput" "answerbutton"; margin-top: 2vmax;}
+.testpage_0001 .questionDefault>.answerinputitem>.answerinput{grid-area:answerinput; font-size: 1vmax; color:inherit; border-radius: 1px; background-color: inherit;text-align: center; align-self: center;}
+.testpage_0001 .questionDefault>.answerinputitem>.answerbutton{grid-area:answerbutton; align-self: center; justify-self:center; }

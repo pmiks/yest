@@ -1,0 +1,362 @@
+.testpage_AVTO{ padding-top: 0; width: 100%; max-width: 140vh;min-width: 80vw;text-align:  center; justify-self:center; overflow: visible; display: grid; justify-items:stretch;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "quest"
+  "header"
+  "pagenator";
+  grid-gap: 4vh;
+}
+
+.testpage_AVTO>.testHeaderDefault{
+  grid-area:header;
+  display: grid; grid-template-columns:  1fr auto; margin-top: 2vh;
+  margin-bottom: 0; margin-left: 0; margin-right: 0; background: gray;
+  padding: 2px 50px; color: white; opacity: 0.8; align-items: center;grid-gap: 50px;
+  justify-self:stretch;
+}
+.testpage_AVTO>.testHeaderDefault>.name{ font-size: 1.5em; font-weight: bold; text-align: left; }
+.testpage_AVTO>.testHeaderDefault>.time{ font-size: 1em; font-weight: bold; text-align: right;}
+
+.testpage_AVTO>.HelpTools{display: none;}
+
+.testpage_AVTO>.pagenatorDefault{
+  grid-area:pagenator;
+  background-color: transparent;
+  display: inline-flex;
+  justify-self:center;
+  font-size: 1vmax;
+
+  /* grid-template-columns: repeat(auto-fill,minmax(min-content,20px));  */
+  grid-template-columns: repeat(auto-fill,3em);
+  grid-column: 2em;
+}
+.testpage_AVTO>.pagenatorDefault >.pageItem{
+    /* display: grid;  */
+    justify-self:stretch;
+    justify-items:right;
+margin-right:  0.3vw;
+    align-self: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #000000;
+    background-color: white;
+    border:1px solid lightgray;
+    cursor:pointer;
+    grid-template-areas: "num value";
+    padding: 0.1vw;
+    width: 2em;
+  }
+.testpage_AVTO>.pagenatorDefault >.pageItem:hover{color: #ffffff;  background-color: grey;   border-color:  grey;  }
+.testpage_AVTO>.pagenatorDefault >.pageItem>.num{grid-area: num; justify-self:center;justify-items:center;display:grid; }
+.testpage_AVTO>.pagenatorDefault >.pageItem>.value{grid-area: value;display: none;}
+.testpage_AVTO>.pagenatorDefault >.notclicable:hover{ color: black;  background-color: white; border-color:  white; cursor: default;}
+.testpage_AVTO>.pagenatorDefault >.selectedPageNumber{ color: #ffffff;  background-color: #d46d23; border-color:  grey;  }
+
+
+
+/* Блокирующий экран--------------------------------------*/
+.testpage_AVTO>.BlockLayer{ right: 0; left:0; top:0; bottom:0; display: block;  position:fixed; background-color: white;
+  z-index: 1;  opacity: 0;  align-content: center;  align-items: center;  align-self: center;}
+
+/* Результат вопроса--------------------------------------*/
+ .testpage_AVTO>.QuestionResultDefault{
+  background-color: white;
+  border: 3px solid green;
+  padding: 2vmax;
+  z-index: 2;
+  display: grid;
+  grid-template-areas:
+    "result"
+    "picquestion"
+    "stat"
+    "wronganswertext"
+    "rightanswertext"
+    "comment";
+  grid-template-columns: 1fr;
+  position: absolute;
+  top: 50%;
+  top: calc( 50% + 50px );
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0px;
+  box-shadow: 0 0 5vw rgba(0,255,0,0.5);
+  color:black;
+  font-weight: bold;
+  width: 75vw;
+  grid-column-gap: 1em;
+  /* max-width: 1024px; */
+  max-width: 100vh;
+  align-items: center;
+  /* max-height: 70vh; */
+  align-self: center;
+  font-size: 2.3vmin;
+  min-height: 40vh;
+}
+
+.testpage_AVTO>.wrong{ border: 1vmin solid red;box-shadow: 0 0 5vw rgba(255,0,0,0.5);}
+
+.testpage_AVTO>.QuestionResultDefault>.picquestion{
+  display: grid;
+  position: absolute;
+  /* margin-top: 2vh; */
+  grid-area: picquestion;
+  max-height: 25vh;
+  max-width: 50vw;
+  justify-self:center;
+  align-self: center;
+  align-items: center;
+  border: 1px solid black;
+  opacity: 0.3;
+  top: 50%;
+  top: calc( 50% + 50px );
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
+/* .testpage_AVTO>.QuestionResultDefault>.picquestion img{border: 0px none } */
+
+.testpage_AVTO>.QuestionResultDefault>.textquestion{grid-area:textquestion;display: none;}
+.testpage_AVTO>.QuestionResultDefault>.picrightanswer{grid-area:picrightanswer;display: none;}
+.testpage_AVTO>.QuestionResultDefault>.textrightanswer{grid-area:textrightanswer;display: none;}
+.testpage_AVTO>.QuestionResultDefault>.picwronganswer{grid-area:picwronganswer;display: none;}
+.testpage_AVTO>.QuestionResultDefault>.textwromganswer{grid-area:textwromganswer;display: none;}
+
+.testpage_AVTO>.QuestionResultDefault>.result{ grid-area: result; font-size: 2.2em;  padding-bottom: 1vh;z-index: 4;}
+.testpage_AVTO>.QuestionResultDefault>.result::before{content: ""}
+.testpage_AVTO>.QuestionResultDefault>.stat{ grid-area: stat; font-size: 1.5em; padding-bottom: 1vh;border-bottom: 0px dotted grey; margin-bottom: 10px;z-index: 4;}
+.testpage_AVTO>.QuestionResultDefault>.comment{
+  z-index: 4;
+  grid-area: comment;
+  text-align:justify;
+  padding: 2vmin;
+  background-color: white;
+  font-weight: normal;
+  color:black;
+  border-radius: 0px;
+  align-self:stretch;
+  max-height: 50vw;
+  overflow-y: scroll;
+  display: none;
+}
+.testpage_AVTO>.QuestionResultDefault>.rightanswertext{grid-area:rightanswertext; border: 0px solid lightgreen;z-index: 4; background-color: rgba(0,255,0,0.2);display: grid;align-self: stretch;align-items: center;}
+.testpage_AVTO>.QuestionResultDefault>.wronganswertext{grid-area: wronganswertext; z-index: 4; background-color: rgba(255,0,0,0.2);display: grid;align-self: stretch;align-items: center;}
+.testpage_AVTO>.QuestionResultDefault>.rightanswerpic{display: none;grid-area: rightanswerpic;display: none;}
+.testpage_AVTO>.QuestionResultDefault>.wronganswerpic{display: none;grid-area: wronganswerpic;display: none;}
+
+
+  /* Блок вопроса--------------------------------------*/
+.testpage_AVTO .questionDefault{
+      grid-area:quest;
+      padding: 0; margin-top: 2vh;
+      /* justify-self:right; */
+      color:black;  background-color: transparent;
+      border: 0px dotted grey;
+      box-shadow: 0 0 0px rgba(0,0,0,0.5);
+      font-size: 1vmin;
+      display:grid;
+      justify-items:center;
+      grid-template-areas:   "textquestion"   "questionpic" "answerinputitem";
+      overflow:hidden;
+      position: relative;
+      /* max-width: 120vh; */
+      /*width: 100% */
+      height: 60vh;
+    }
+    @media (orientation: landscape) {.testpage_AVTO .questionDefault{
+      margin-left: 10vw;
+      margin-right: 10vw;
+          /* background: transparent;
+          padding: 0;
+          position: relative;
+          border: none; */
+    }}
+
+
+  /* Поле вопроса--------------------------------------*/
+
+.testpage_AVTO .questionDefault>.questionitemtext{grid-area:textquestion; align-self: center;font-size: 3.5em;display: none;}
+.testpage_AVTO .questionDefault>.questionitempic{grid-area:questionpic;max-height: 25vh;max-width: 70vw;border: 0px solid gray; display: block;
+z-index: 2;
+display: grid;
+position: relative;
+align-self: center;
+justify-self:center;
+
+ }
+@media (orientation: landscape) {.testpage_AVTO .questionDefault>.questionitempic{
+/* width: auto;
+height: 37vh;
+height: calc( 40vh - 50px);
+max-height: 75vh;max-width: 100vw; */
+}}
+
+
+  /* Поле ответа--------------------------------------*/
+.testpage_AVTO .questionDefault>.answerlist{grid-area:answerlist;
+  display: grid; grid-template-columns: 1fr 1fr;
+  grid-gap: 0vh; background-color: inherit; justify-self:stretch;
+  justify-items:stretch;
+  margin-top: 0vh;
+  position: absolute;left: 0;right: 0;top:0px;bottom: 0px;align-items: stretch;align-self: stretch;}
+@media (orientation: landscape) {.testpage_AVTO .questionDefault>.answerlist{}}
+
+@media (orientation: landscape) {.testpage_AVTO .questionDefault>.answerlist:hover{}}
+
+
+.testpage_AVTO .questionDefault>.answerlist >.answeritem{
+    display: grid;
+    text-align: center;
+    padding: 10vh 8vw;
+    border: 0px solid red;
+    color:black; background-color: transparent;
+    font-size: 4em; font-weight: normal;
+    align-items: center;
+    grid-gap: 0.2em;
+    grid-template-columns: 1fr;
+    grid-template-areas: "answertext";
+    justify-self: stretch;
+    justify-items: center;
+    /* background-color: red; */
+  }
+
+.testpage_AVTO .questionDefault>.answerlist>.answeritem .smallfont{font-size:0.5em;color: maroon;margin-top: 0;}
+
+  .testpage_AVTO .questionDefault>.answerlist #answer3 {
+    justify-items: end;
+    align-items: flex-end;
+    /* transform: rotate(-15deg); */
+  }
+  .testpage_AVTO .questionDefault>.answerlist #answer0 {
+    justify-items: start;
+    align-items:flex-start;
+    /* transform: rotate(-15deg); */
+  }
+  .testpage_AVTO .questionDefault>.answerlist #answer1 {
+    justify-items: end;
+    align-items:flex-start;
+    /* transform: rotate(15deg); */
+  }
+  .testpage_AVTO .questionDefault>.answerlist #answer2 {
+    justify-items: start;
+    align-items: flex-end;
+    /* transform: rotate(15deg); */
+  }
+
+
+  @media (orientation: landscape) {.testpage_AVTO .questionDefault>.answerlist >.answeritem{
+      /* background: transparent;
+      background-color: rgba(0, 0, 0, 0.1);
+      border: 0px solid red; */
+  }}
+
+.testpage_AVTO .questionDefault>.answerlist >.answeritem>.pic{grid-area:pic;display: none;}
+.testpage_AVTO .questionDefault>.answerlist >.answeritem>.nn{grid-area:nn; display: none;}
+.testpage_AVTO .questionDefault>.answerlist >.answeritem>.answertext{grid-area:answertext;display:grid;justify-items:stretch;background-color: lightgray; padding: 3px 10px;
+border: 1px solid orange; border-radius: 10px}
+.testpage_AVTO .questionDefault>.answerlist >.answeritem:hover>.answertext{border: 3px solid orange; }
+.testpage_AVTO .questionDefault>.answerlist >.item{}
+.testpage_AVTO .questionDefault>.answerlist >.answeritem:hover{ color:black; background-color: inherit;; box-shadow:  0 0 0 rgba(0,130,255,1);transform: scale(1.2);}
+/* .testpage_AVTO .questionDefault>.answerlist >.wrongitem{ background-color: red; box-shadow: 0 0 25px rgba(255,0,0,1);}
+.testpage_AVTO .questionDefault>.answerlist >.rightitem{ background-color: green; box-shadow: 0 0 25px rgba(0,255,0,1); } */
+
+/* .testpage_AVTO .questionDefault>.answerlist >.itemselected{ color:#ffffff;  background-color: blue;  box-shadow: 0 0 25px rgba(255,0,0,1);}
+.testpage_AVTO .questionDefault>.answerlist >.itemselected:hover{ color:#000000; background-color: #858181; box-shadow: 0 0 25px rgba(255,0,0,1);} */
+ .testpage_AVTO .questionDefault>.answerlist >.wrongitem{ background-color: inherit; box-shadow: 0 0 0 rgba(255,0,0,1);}
+.testpage_AVTO .questionDefault>.answerlist >.rightitem{ background-color: inherit; box-shadow: 0 0 0 rgba(0,255,0,1); }
+
+  /* Поле ввода ответа-------------------------------------*/
+.testpage_AVTO .questionDefault>.answerinputitem{grid-area:answerinputitem; font-family: "Arial"; background-color: lightgray;  color:black;  padding: 20px;justify-self:stretch; display: grid;
+                             grid-template-areas: "answerinput answerbutton"; margin-top: 10vh;border-radius: 15px;grid-template-rows: minmax(min-content,max-content);align-items: stretch;
+                             grid-column-gap: 1em;display: none;}
+.testpage_AVTO .questionDefault>.answerinputitem>.answerinput{grid-area:answerinput; font-size: 4em; color:inherit; border-radius: 15px; background-color: inherit;text-align: center; align-self: center; border: 3px solid gray;}
+.testpage_AVTO .questionDefault>.answerinputitem>.answerbutton{display: grid;grid-area:answerbutton; align-self: stretch; justify-self:stretch; border: 3px solid gray;border-radius: 15px; align-items: center;font-size: 3em;cursor: pointer;background-color: #d46d23}
+.testpage_AVTO .questionDefault>.answerinputitem>.answerbutton:hover{background-color: orange;border-color: black;}
+  /* -------------------------------------------------------*/
+
+
+  /*Форма результата теста*/
+.testpage_AVTO>.testres{
+    display: grid;
+    grid-row-gap: 1vmin;
+    grid-template-areas:
+      "th th" "ts tsp" "trs trs" "tss tss" "tsi tsi" "sns sns" "btnrepeat btngomainpage" "er er";
+    color: black;
+    padding: 1vmin;
+    box-shadow: 0 0 50px rgba(55,55,55,1);
+    background-color: white;
+    margin: 30px;
+    font-size: 1vw;
+}
+
+.testpage_AVTO>.testres>.header      {grid-area:th;font-size: 3em; font-weight: 700;justify-self:center; }
+.testpage_AVTO>.testres>.stat        {grid-area:ts;font-size: 2em; font-weight: 700; justify-self:right;}
+.testpage_AVTO>.testres>.statpercent {grid-area:tsp;  font-size: 2em; font-weight: 700;justify-self:left;}
+.testpage_AVTO>.testres>.statscore   {grid-area:tss;  font-size: 2em; font-weight: 700;justify-self:center;display: none;}
+.testpage_AVTO>.testres>.statimg     {grid-area:tsi;  font-size: 2em; font-weight: 700;}
+.testpage_AVTO>.testres>.resumeString{grid-area:trs; font-size: 3em; font-weight: 700;}
+
+.testpage_AVTO>.testres>.btnrepeat{
+ grid-area: btnrepeat;
+ display: grid;
+ color: white;
+ align-self: stretch;
+ align-items: center;
+ justify-self:stretch;
+ margin: 1vmin;
+ background-color: orange;
+ height: 3em;
+ font-size: 1.5em;
+ border: 1px solid gray;
+}
+.testpage_AVTO>.testres>.btnrepeat:hover{background-color: green;}
+.testpage_AVTO>.testres> .btngomainpage{
+  grid-area: btngomainpage;
+  display: grid;
+  color: white;
+  align-self: stretch;
+  align-items: center;
+  justify-self:stretch;
+  margin: 1vmin;
+  background-color: orange;
+  height: 3em;
+  font-size: 1.5em;
+  border: 1px solid gray;
+}
+.testpage_AVTO>.testres>.btngomainpage:hover{background-color: green;}
+
+.testpage_AVTO>.testres>.snsharing   {grid-area:sns; font-size: 3em; font-weight: 700;margin-bottom: 5vh}
+.testpage_AVTO>.testres>.errors      { grid-area:er; margin-top: 10vh;}
+.testpage_AVTO>.hide{display: none;}
+.testpage_AVTO>.testres>.errors>.item{
+    grid-template-areas:
+      "n qi q  q"
+      "n qi ra wa" ;
+    grid-template-columns: 2em 8em 1fr 1fr;
+    background-color: orange;
+    padding: 5px;
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 1vmin;
+    justify-self:stretch;
+    margin-top: 1vmin;
+    font-size: 1.7em;
+  }
+
+.testpage_AVTO>.testres>.errors>.item>.num      { grid-area: n;  width: 2em; }
+.testpage_AVTO>.testres>.errors>.item>.qimg     { grid-area: qi;  width: 8em;  justify-self: left;  align-self:  center;}
+.testpage_AVTO>.testres>.errors>.item>.questtext{ grid-area: q;  background-color: white;background-color: inherit;}
+.testpage_AVTO>.testres>.errors>.item>.rightresult{ grid-area: ra; padding: 1vmin; text-align: left; background-color: #008000; color: white; }
+.testpage_AVTO>.testres>.errors>.item>.wrongresult{  grid-area: wa; padding: 1vmin; text-align: left; background-color: red; color: white; }
+.testpage_AVTO>.testres>.errors img{ width: 7em;}
+.testpage_AVTO>.testres>.errors>.item>.statres{  display: inline;  visibility:visible;}
+
+
+.testpage_AVTO .social_icon{}
+
+.testpage_AVTO .social_icon img{
+  width: 3vmax;
+  height: 3vmax;
+  max-width: 40px;
+  max-height: 40px;
+}

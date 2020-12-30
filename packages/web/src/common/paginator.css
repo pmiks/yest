@@ -1,0 +1,22 @@
+.pagenatorDefault{
+  display: grid;
+  background-color: transparent;
+  grid-template-columns: repeat(auto-fit,minmax(min-content,20px));
+  grid-gap: 0.1vw;
+}
+.pagenatorDefault >.pageItem{
+    display: grid;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #000000;
+    background-color: white;
+    border:1px solid lightgray;
+    cursor:pointer;
+    grid-template-areas: "num value";
+    padding: 0.1vw;
+  }
+.pagenatorDefault >.pageItem:hover{color: #ffffff;  background-color: grey;   border-color:  grey;  }
+.pagenatorDefault >.pageItem>.num{grid-area: num;}
+.pagenatorDefault >.pageItem>.value{grid-area: value;display: none;}
+.pagenatorDefault >.notclicable:hover{ color: black;  background-color: white; border-color:  white; cursor: default;}
+.pagenatorDefault >.selectedPageNumber{ color: #ffffff;  background-color: #d46d23; border-color:  grey;  }

@@ -1,0 +1,152 @@
+
+@media (orientation: portrait) {
+    .line{
+      white-space: nowrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr 1fr;
+      align-items: center;
+      justify-items:right;
+      overflow-y: hidden;
+    }
+
+    .logo{
+      white-space: nowrap;
+      align-items: center;
+      justify-items:right;
+
+      display: grid;
+      grid-template-columns: 1fr 0;
+      margin-left:  15px;
+      margin-right: 15px;
+    }
+
+    .logo>div{
+      white-space: nowrap;
+      align-items: center;
+      justify-items:right;
+      display: inline;
+    }
+
+    .line input{
+      border-radius: 15px;
+      padding: 3px 10px;
+      border: 0;
+      background-color: #b05d1e;
+      font-size: 9pt;
+      font-weight: bold;
+      color: #eb8334;
+      margin-right: 10px;
+    }
+
+    .line input:focus{
+      border-width: 0;
+      background-color: white;
+      color: black;
+    }
+
+  div.NAME{
+    visibility: hidden;
+  }
+
+  .line input::placeholder{
+    color: #eb8334;
+  }
+
+  .line input:focus::placeholder{
+    color:white;
+    margin-left:  15px;
+  }
+
+  .line button{
+    border-radius: 3px;
+    padding: 3px 10px ;
+    margin-right: 20px;
+    border: 0;
+    background-color: #eb8334;
+    font-size: 12pt;
+    color: white;
+
+  }
+  .line button:hover{
+    background-color: #b05d1e
+  }
+
+}
+
+@media (orientation: landscape) {
+    .line{
+        white-space: nowrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr 1fr;
+        align-items: center;
+        justify-items:right;
+        overflow-y: hidden;
+    }
+
+    .logo{
+        white-space: nowrap;
+        align-items: center;
+        justify-items:right;
+        justify-self:right;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+    .logo>div{
+        white-space: nowrap;
+        align-items: center;
+        justify-items:right;
+        display: inline;
+    }
+
+
+    .line input{
+        border-radius: 15px;
+        padding: 3px 10px ;
+        border: 0;
+        background-color: #b05d1e;
+        font-size: 12pt;
+        font-weight: bold;
+        color: #eb8334;
+    }
+
+    .line input:focus{
+        border-width: 0;
+        background-color: white;
+        color: black;
+    }
+
+      div.NAME{
+        display: inline;
+        border-radius: 15px;
+        padding: 7px 10px ;
+        border: 0;
+        background-color: inherit;
+        font-size: 12pt;
+        font-weight: bold;
+        color: white;
+      }
+      .line input::placeholder{
+        color: #eb8334;
+      }
+
+    .line input:focus::placeholder{
+        color:transparent;
+        margin-left:  15px;
+    }
+
+    .line button{
+        border-radius: 3px;
+        padding: 3px 10px ;
+        margin-right: 20px;
+        border: 0;
+        background-color: #eb8334;
+        font-size: 12pt;
+        color: white;
+    }
+
+    .line button:hover{
+        background-color: #b05d1e
+      }
+}

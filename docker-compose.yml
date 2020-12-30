@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  
+  node:
+    image: node:10.19
+    restart: on-failure
+    ports:
+      - 3000:3000
+
+  db_test:
+    image: postgres:11.4
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=pmiks
+      - POSTGRES_PASSWORD=pmiks
+      - POSTGRES_DB=web_test
+    volumes:
+      - ./database:/var/lib/postgresql/data
+
+  pg_web:
+    image: sosedoff/pgweb
+    restart: on-failure
+    ports:
+      - 3030:8081
+    environment:
+      - DATABASE_URL=postgres://pmiks:pmiks@db_test:5432/web_test?sslmode=disable
+    depends_on:
+      - db_test
+    healthcheck:
+      disable: true

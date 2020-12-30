@@ -1,0 +1,32 @@
+.testresult{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-gap:0.3em;
+    background-color: lightgray;
+    border: 1px dotted black;
+}
+
+.testresult>.testresultitem{
+    display: grid;
+    grid-template-columns: minmax(0,50px) minmax(0,50px) minmax(0,50px) minmax(0,50px) 1fr minmax(0,60px) 30px;
+    align-items:flex-start;
+}
+
+.testresult>.testresultitem textarea{
+  height: 4em;
+  width: 100%;
+}
+
+
+.testresult>.testresultitem div{
+  min-width: 0;
+}
+
+.testresult>.header{
+  font-size: 0.7em;
+  font-weight: bold;
+  align-content: center;
+  align-self: center;
+}

@@ -1,0 +1,44 @@
+/*Cписок билетов*/
+
+.TicketsListDefault{
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns:  repeat(auto-fill, minmax(15vw,250px));
+  /* grid-template-rows: repeat(auto, minmax(150px, 250px)); */
+  grid-auto-rows: minmax(15vw,250px);
+  margin: 5vh;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  align-self: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+.TicketsListDefault>.TicketsListItem{
+  padding: 1vmax;
+  display: grid;
+  background-color: white;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  border: 3px solid orange;
+  border-radius: 3px;
+  justify-self:stretch;
+  align-self:stretch;
+  font-size: 3em;
+  overflow: hidden;
+}
+
+.TicketsListDefault>.TicketsListItem div{
+    align-self: center;
+    align-items: center;
+}
+
+.TicketsListDefault>.TicketsListItem:hover{
+  background-color: orange;
+  text-align: center;
+  border: 1px solid orange;
+  border-radius: 3px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}

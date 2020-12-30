@@ -1,0 +1,21 @@
+/*Форма редактирования теста*/
+.testedit{display:inline-block; grid-gap: 1px;  font-size: 1em; grid-columns: repeat(auto-fit,minmax(min-content,max-content));text-align: left; justify-self: stretch;
+     background-color: #d6bb81; margin: 3px}
+
+.testedit div{
+    float: left;
+     padding: 5px;
+     background-color: #d6bb81;
+     display: grid;
+     margin: 5px;
+     grid-template-columns: minmax(min-content,max-content) minmax(min-content,max-content) minmax(min-content,max-content);
+     align-items:center;
+     justify-self: left;
+     justify-items: left;
+     max-width: 100vw;
+     max-height: 100px;
+
+}
+.testedit label{ align-self: center; margin: 0 10px; font-weight: bold;white-space: nowrap;}
+.testedit input{display: grid; justify-self: stretch;  align-self: center;  padding: 1px;  margin: 5px;left: 0; width:auto;}
+.testedit>.checktype{ justify-content:flex-start; grid-column: 1/3;}

@@ -1,0 +1,29 @@
+/* Список тестов--------------------------------------*/
+
+.testlist{
+    display: grid;
+    grid-auto-rows:minmax(10px,max-content);
+    padding: 15px;
+    padding-top: 50px;
+    grid-gap: 5px;
+}
+
+.testlist .testsitem{
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: minmax(100px,max-content) 1fr minmax(min-content,max-content) minmax(min-content,max-content);
+  grid-gap: 10px;
+  background-color: grey;
+  color: white;
+}
+
+.testlist .published{ background-color: #c9d1d6; color:black;}
+
+.testlist .testsitem:hover{background-color: orange;}
+.testsitem>div{justify-self:stretch; align-self: center; }
+.testsitem>.idtest{font-size: 18px;  font-weight: bold;  width: 10%;  background-color: inherit;}
+.testsitem>.name{font-size: 18px;  font-weight: bold;text-align: left;background-color: inherit;}
+.deleteButton{ z-index: 10;font-size: 12px; border: 1px solid red;border-radius: 2px;margin:5px; padding: 2px; font-weight: 100;}
+.deleteButton:hover{background: red;}
+.addButton{font-size: 14px; border: 1px solid red;border-radius: 2px;margin:5px; padding: 2px; font-weight: 100;margin-bottom: 30px;}
+.addButton:hover{background: green;}

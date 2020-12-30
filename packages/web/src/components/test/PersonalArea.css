@@ -1,0 +1,53 @@
+.PersonalArea{
+  display: grid;
+  grid-template-columns: 1fr 4fr 300px;
+  grid-template-rows: 100vh;
+  grid-gap: 1em;
+}
+
+.PersonalArea>.menu{
+  margin-left: 20px;
+  padding-top: 50px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-self: flex-start;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.PersonalArea>.menu>.mitem{
+  padding: 5px;
+  margin: 5px;
+  color: #f2972e;
+}
+
+.PersonalArea>.menu>.mitem:hover{
+  color:#d17000 ;
+}
+
+
+.PersonalArea>.context{
+  background-color: transparent;
+  align-self: stretch;
+}
+
+.PersonalArea>.rekField{
+      display:block;
+      position:fixed;
+      bottom: 1vh;
+      left: 1vw;
+      right: 1vw;
+      padding: 0;
+      justify-items:center;
+      justify-self:stretch;
+      height: 90px;
+      background-color: transparent;
+      /* border: 1px solid black; */
+      text-align: center;
+}
+
+.PersonalArea>.rekField:hover{
+  background-color: rgba(0,0,0,0.1);
+}

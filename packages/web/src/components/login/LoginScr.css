@@ -1,0 +1,69 @@
+@media (orientation: portrait) {
+  .btn img{
+    height:20px;
+  }
+}
+
+@media (orientation: landscape) {
+  .btn img{
+    height:30px;
+  }
+}
+
+.Login {
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  grid-gap: 5px;
+  justify-items: right;
+  align-items: flex-start;
+  text-align: right;
+  align-self:  flex-end;
+  margin-right: 40px;
+}
+
+.Login> .btn {
+  white-space: nowrap;
+  padding: 3px 3px;
+  border-radius: 3px;
+  background-color:inherit;
+  font-size: 9pt;
+  font-weight:bold;
+  color: white;
+  border: 1px solid #b05d1e;
+  justify-items: right;
+  align-self: center;
+  text-align: center;
+}
+
+.Login> .btn:hover{ background-color: #b05d1e }
+
+.Login> .btn div{
+  display:inline;
+  background-color: inherit;
+  font-size: inherit;
+  vertical-align: middle;
+  margin: 3px;
+  justify-self: center;
+  color:white;
+}
+
+.btn a{ text-decoration: none; }
+
+.btn img{
+  vertical-align: middle;
+  border-radius: 100px; /* Радиус скругления */
+  border: 1px solid  #b05d1e; /* Параметры рамки */
+  box-shadow: 0 0 7px #666; /* Параметры тени */
+  overflow: hidden;
+}
+
+.authchoise{
+  white-space: nowrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.authchoise img{
+  height: 30px;
+}

@@ -1,0 +1,25 @@
+.allresultlist{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+}
+.allresultlist>.allresultlistitem{
+  background-color: #bafff5;
+  display: grid;
+  grid-template-columns: 1fr 100px 90px 70px 70px 70px 100px 60px 60px;
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+.allresultlist>.allresultlistitem:hover{
+  background-color: #78f5e3;
+}
+
+.allresultlist div{
+  text-align: left;
+  font-size: 12px;
+}
+
+.allresultlist>.notfinished{
+  background-color: red;
+}

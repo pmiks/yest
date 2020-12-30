@@ -1,0 +1,45 @@
+    /*Форма результата теста*/
+    .testres{
+      display: grid;
+      grid-row-gap: 1vmin;
+      grid-template-areas:
+        "th th" "ts tsp" "trs trs" "tss tss" "tsi tsi" "er er" "sns sns";
+      color: black;
+      padding: 1vmin;
+      box-shadow: 0 0 50px rgba(55,55,55,1);
+      background-color: white;
+      margin: 30px;
+      font-size: 1vw;
+    }
+
+    .testres>.header      {grid-area:th;font-size: 3em; font-weight: 700;justify-self:center; }
+    .testres>.stat        {grid-area:ts;font-size: 2em; font-weight: 700; justify-self:right;}
+    .testres>.statpercent {grid-area:tsp;  font-size: 2em; font-weight: 700;justify-self:left;}
+    .testres>.statscore   {grid-area:tss;  font-size: 2em; font-weight: 700;justify-self:center;display: none;}
+    .testres>.statimg     {grid-area:tsi;  font-size: 2em; font-weight: 700;}
+    .testres>.resumeString{grid-area:trs; font-size: 3em; font-weight: 700;}
+    .testres>.snsharing   {grid-area:sns; font-size: 3em; font-weight: 700;}
+    .testres>.errors      { grid-area:er; }
+    .hide{display: none;}
+    .testres>.errors>.item{
+      grid-template-areas:
+        "n qi q  q"
+        "n qi ra wa" ;
+      grid-template-columns: 2em 8em 1fr 1fr;
+      background-color: orange;
+      padding: 5px;
+      border: 1px solid black;
+      display: grid;
+      grid-gap: 1vmin;
+      justify-self:stretch;
+      margin-top: 1vmin;
+      font-size: 1.7em;
+    }
+
+    .testres>.errors>.item>.num      { grid-area: n;  width: 2em; }
+    .testres>.errors>.item>.qimg     { grid-area: qi;  width: 8em;  justify-self: left;  align-self:  center;}
+    .testres>.errors>.item>.questtext{ grid-area: q;  background-color: inherit;}
+    .testres>.errors>.item>.rightresult{ grid-area: ra; padding: 1vmin; text-align: left; background-color: green; color: white; }
+    .testres>.errors>.item>.wrongresult{  grid-area: wa; padding: 1vmin; text-align: left; background-color: red; color: white; }
+    .testres>.errors img{ width: 7em;}
+    .testres>.errors>.item>.statres{  display: inline;  visibility:visible;}

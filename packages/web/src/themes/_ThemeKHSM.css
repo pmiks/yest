@@ -1,0 +1,503 @@
+/* Тема кто хочет стать миллионером-------------------------------------*/
+.testpage_0002{ padding-top: 0px;
+max-width: 146vh;
+  /* max-width: 153vh; */
+  /* width: 100vw; */
+  min-width: 80vw;
+  position: relative;
+  font-size: 1vmin;align-self: stretch;
+  text-align:  center;
+  justify-self:center;
+  justify-items:stretch;
+  overflow: visible;
+  align-self: stretch;
+  margin-bottom: 0;
+  height: 93vh;
+
+}
+  @media (orientation: landscape) {.testpage_0002{
+       background-image: url('https://api.electricalab.ru/images/system/million_back_h.jpg');
+       background-position: center;  background-repeat: no-repeat;  background-size: auto 100vw;
+      }}
+   @media (orientation: portrait) {.testpage_0002{
+        background-image: url('https://api.electricalab.ru/images/system/million_back_v.jpg');
+        background-position: center;  background-repeat: no-repeat;  background-size:  100vh auto;
+     }}
+     .testHeader_0002{  display: none;}
+
+     .testpage_0002>.rekField{
+           display:block;
+           position: absolute;
+           min-height: 90px;
+           height: 90px;
+           top:0px;
+           left: 0;
+           right: 0;
+           z-index: 100;
+           text-align: center;
+           margin-top: 0vh;
+           bottom:;
+     }
+
+.testpage_0002 .testHeaderDefault{  display: none;   }
+
+
+.testpage_0002 .questionDefault{
+      padding: 0; margin-top: 0;
+      background-color: transparent;
+      border: 0px dotted grey;
+      box-shadow: 0 0 0 rgba(0,0,0,0.5);
+      display:grid;
+      justify-items:stretch;
+      grid-template-areas:  "textquestion" "answerlist"   ;
+      grid-row-gap: 0em;
+    }
+
+.testpage_0002 .questionDefault>.questionitemtext{
+  grid-area:textquestion;
+  display: grid;
+  font-size:4em;
+  background-image: url('https://api.electricalab.ru/images/system/questionmillioner.png');
+  background-position: center;  background-repeat: no-repeat;  background-size: 100% 100%;
+  padding-left: 15%;
+  padding-right: 15%;
+  min-height: 3.1em;
+  color: white;
+  align-self:flex-end;
+  align-items: center;
+  padding-bottom: 1%;
+  z-index: 2;
+}
+@media (orientation: landscape) { .testpage_0002 .questionDefault>.questionitemtext { margin-top:  55vh;} }
+@media (orientation: portrait) {  .testpage_0002 .questionDefault>.questionitemtext {   margin-top:  52vh;}  }
+.testpage_0002 .questionDefault>.questionitempic{grid-area:questionpic; display: block; max-height: 0vh;max-width: 0vw;}
+
+.testpage_0002>.add_div1{
+  color: white;
+  display: block;
+  left:13%;
+  max-height: 40vmin;
+  width: 40vmin;
+  position:absolute;
+  background-color: transparent;
+  background-image: url('https://api.electricalab.ru/images/system/million_logo.png');
+  background-position: center;  background-repeat: no-repeat;  background-size: auto 100%;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition:         transform .8s ease-in-out;
+
+}
+@media (orientation: landscape) { .testpage_0002>.add_div1 {height: 40vh;width: 40vw; top:11vh; left: 8%} }
+@media (orientation: portrait) {  .testpage_0002>.add_div1 {height: 30vh;width: 40vw; top:9vh; top:calc( 8% + 40px );} }
+.testpage_0002>.add_div1:hover{  -webkit-transform: rotateZ(360deg);   transform: rotateZ(360deg);  }
+
+.testpage_0002>.SelectLevelLayer {
+  display: grid;  grid-template-columns: 1fr;  position:absolute; background-color: transparent;
+   align-self: stretch; align-items: center; font-size: 4em; color: white;  padding: 1vmin}
+   @media (orientation: landscape) { .testpage_0002>.SelectLevelLayer {right: 0; left:50%; top:0;bottom:0;padding-right: 3vw} }
+   @media (orientation: portrait) {  .testpage_0002>.SelectLevelLayer {right: 0; left:0; top:35vh;bottom:0;} }
+
+.testpage_0002>.SelectLevelLayer>.pagenatorDefault{ display: grid;  background-color: transparent;
+  grid-template-columns: 1fr;     font-size: 1vmin;   width: 100%; justify-self: center; height: 100%; margin-top: 2%;margin-bottom: 10%}
+
+.testpage_0002>.SelectLevelLayer> .pagenatorDefault >.pageItem{
+    align-self: center;  display: grid; font-size: 2.7em;   font-weight: bold;    color: #B8860B;
+    background-color: transparent;   border:none;    cursor:pointer;
+    grid-template-columns: 1fr 3fr;    grid-template-areas: "num value";    grid-gap: 2em;    padding-top: 0;  }
+
+.testpage_0002>.SelectLevelLayer> .pagenatorDefault >.pageItem:hover{color: #B8860B; background-color: transparent;   border-color:  grey;
+  color: #ffffff;  background-color: transparent;
+    background-image: url('https://api.electricalab.ru/images/system/million_ans_orange.png');
+    background-position: center;  background-repeat: no-repeat;  background-size: 100% 100%; }
+.testpage_0002>.SelectLevelLayer> .pagenatorDefault >.pageItem>.num{display: block;grid-area: num;justify-self: right;padding-left: 2vw; }
+.testpage_0002>.SelectLevelLayer> .pagenatorDefault >.pageItem>.value{display: block;grid-area: value;justify-self: right;padding-right: 14vw}
+
+.testpage_0002>.SelectLevelLayer> .pagenatorDefault >.selectedPageNumber{ color: #ffffff;  background-color: transparent;
+  background-image: url('https://api.electricalab.ru/images/system/million_ans_orange.png');
+  background-position: center;  background-repeat: no-repeat;  background-size: 100% 100%; }
+
+
+
+.testpage_0002>.add_div2{
+  z-index:0;
+  color: white;
+  display:grid ;
+  top:8%;
+  left:13%;
+  max-height: 40vmin;
+  padding: 1vh;
+  font-size:4em ;
+  position:absolute;
+  border: 1px solid white;
+  border-radius: 15px;
+  align-items: center;
+  background-color: transparent;
+}
+@media (orientation: landscape) { .testpage_0002>.add_div2 {height: 40vh;width: 33%; top:7vh; left: 8%} }
+@media (orientation: portrait) {  .testpage_0002>.add_div2 {height: 30vh;width: 40vw; top:5vh;} }
+
+.testpage_0002>.add_div3{
+  display: grid;background-color: black; width: 10em;height:10em ; align-self: center; align-items: center; color: white;
+  margin-left:  -5em;
+ /* margin-top: -5em; */
+  z-index: 7;
+  position:absolute;
+  background-color: transparent;
+   background-image: url('https://api.electricalab.ru/images/system/million/hwrong.png');
+   background-position: center;  background-repeat: no-repeat;  background-size: 100% auto;
+
+}
+@media (orientation: landscape) { .testpage_0002>.add_div3 {top:80%; left: 50.2%} }
+@media (orientation: portrait) {  .testpage_0002>.add_div3 {top:77%; left: 50%} }
+
+
+.testpage_0002 .questionDefault>.answerlist{grid-area:answerlist; display: grid;grid-gap:9% 0; background-color: inherit; justify-self:stretch; margin-top: 2%}
+@media (orientation: landscape) {.testpage_0002 .questionDefault>.answerlist{  grid-template-columns: 1fr 1fr; min-height: 14vh;max-height: 18vh;} }
+@media (orientation: portrait) {.testpage_0002 .questionDefault>.answerlist{  grid-template-columns: 1fr ; height:25vh;margin-top: 5%;}  }
+.testpage_0002 .questionDefault>.answerlist >.answeritem{
+  min-height: 1em;
+  border: none;
+  color:white; background-color: transparent;
+  font-size: 3em; font-weight: normal;
+  display: grid;
+  grid-column-gap: 0.5em;
+  grid-template-columns: repeat(2,minmax(min-content,max-content)) 1fr;
+  grid-template-areas: "nn pic answertext";
+  justify-self: stretch;
+  justify-items: stretch;
+  align-items: center;
+  align-self:stretch;
+  cursor: pointer;
+  z-index: 6;
+}
+
+@media (orientation: landscape) {
+   .testpage_0002 .questionDefault>.answerlist > .answeritem{
+    color: white;
+    background-image: url('https://api.electricalab.ru/images/system//million/banswer.png');
+    background-position: left center;  background-repeat: no-repeat;  background-size: 126% 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+    .testpage_0002 .questionDefault>.answerlist > #answer0{  padding-left:33%; background-position: left center; }
+    .testpage_0002 .questionDefault>.answerlist > #answer1{  padding-right:33%; background-position: right center; }
+    .testpage_0002 .questionDefault>.answerlist > #answer2{  padding-left:33%; background-position: left center; }
+    .testpage_0002 .questionDefault>.answerlist > #answer3{  padding-right:33%;  background-position: right center; }
+}
+@media (orientation: portrait) {
+.testpage_0002 .questionDefault>.answerlist > .answeritem{  padding: 0.1vh 26%;
+  background-image: url('https://api.electricalab.ru/images/system/million/banswer.png');
+  background-position: center;  background-repeat: no-repeat;  background-size: 100% 100%;
+}
+}
+
+.testpage_0002 .questionDefault>.answerlist >.answeritem>.pic{grid-area:pic;}
+.testpage_0002 .questionDefault>.answerlist >.answeritem>.nn{grid-area:nn;}
+.testpage_0002 .questionDefault>.answerlist >.answeritem>.answertext{grid-area:answertext;text-align: left;}
+.testpage_0002 .questionDefault>.answerlist >.item{}
+.testpage_0002 .questionDefault>.answerlist >.answeritem:hover{ color:black;background-image: url('https://api.electricalab.ru/images/system//million/bansweruser.png'); background-color:transparent ; box-shadow:none;}
+.testpage_0002 .questionDefault>.answerlist >.itemselected{ color:#ffffff;  background-color: transparent ; box-shadow:none;}
+.testpage_0002 .questionDefault>.answerlist >.itemselected:hover{ color:#000000; background-color: #858181; box-shadow:none;}
+.testpage_0002 .questionDefault>.answerlist >.wrongitem{ color: black; font-weight: bold;box-shadow:none ;background-image: url('https://api.electricalab.ru/images/system/million/bansweruser.png');}
+.testpage_0002 .questionDefault>.answerlist >.rightitem{ color: black; font-weight: bold;box-shadow:none; background-image: url('https://api.electricalab.ru/images/system/million/banswerright.png');}
+.testpage_0002 .questionDefault>.answerlist >.notactive{  background-image: url('https://api.electricalab.ru/images/system/million/banswerdis.png');   color:gray;}
+.testpage_0002 .questionDefault>.answerlist >.notactive:hover{color:gray;background-image: url('https://api.electricalab.ru/images/system/million/banswerdis.png');}
+
+.testpage_0002 .questionDefault>.answerinputitem{grid-area:answerinputitem; font-family: "Arial"; background-color: #211f1f;  color:#ffffff;  padding: 1vmax;justify-self:stretch; display: grid;
+                           grid-template-areas: "answerinput" "answerbutton"; margin-top: 2vmax;}
+.testpage_0002 .questionDefault>.answerinputitem>.answerinput{grid-area:answerinput;  color:inherit; border-radius: 1px; background-color: inherit;text-align: center; align-self: center;}
+.testpage_0002 .questionDefault>.answerinputitem>.answerbutton{grid-area:answerbutton; align-self: center; justify-self:center; }
+.testpage_0002> .pagenatorDefault{
+  position: absolute;
+  top:60px;
+  left:65%;
+  display: grid;
+  background-color: transparent;
+  opacity: 1;
+  grid-template-columns: 1fr;
+  grid-gap: 0.1vw;
+  border-radius: 0px;
+  border-left: 2px solid lightgray;
+  padding: 2%;
+  padding-left: 3vw;
+  max-width: 35%;
+  min-height: 35%;
+  font-size: 1vmin;
+  width: 28%;
+  justify-self:stretch;
+  justify-items:stretch;
+}
+
+@media (orientation: portrait) {
+  .testpage_0002> .pagenatorDefault{top:80px;font-size: 0.9vmin;margin-bottom: 10px;}
+
+}
+
+.testpage_0002> .pagenatorDefault >.pageItem{
+    align-self: center;
+    display: grid;
+    font-size: 1.9em;
+    font-weight: bold;
+    color: #B8860B;
+    background-color: transparent;
+    border:0px solid lightgray;
+    cursor:pointer;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "num value";
+    padding-top: 0vh;
+    justify-self:stretch;
+    justify-items:stretch;
+    width: 100%;
+  }
+.testpage_0002> .pagenatorDefault >.pageItem:hover{color: #B8860B; background-color: transparent;   border-color:  grey;  }
+.testpage_0002> .pagenatorDefault >.pageItem>.num{display: block;grid-area: num;justify-self: right;padding-left: 2vw; }
+.testpage_0002> .pagenatorDefault >.pageItem>.value{display: block;grid-area: value;justify-self: right;padding-right: 2vw}
+.testpage_0002> .pagenatorDefault >.done{  background-color: transparent; border-color:  white; cursor: default;
+  background-image: url('https://api.electricalab.ru/images/system/million_q_done.png');
+  background-position: center;  background-repeat: no-repeat;  background-size: 60% 70%;
+}
+.testpage_0002> .pagenatorDefault >.highlighting{color: white;}
+.testpage_0002> .pagenatorDefault >.highlighting:hover{color: white;}
+.testpage_0002> .pagenatorDefault >.notclicable:hover{ }
+.testpage_0002> .pagenatorDefault >.selectedPageNumber{ color: #ffffff;  background-color: transparent;
+  background-image: url('https://api.electricalab.ru/images/system/million_ans_orange.png');
+  background-position: center;  background-repeat: no-repeat;  background-size: 100% 100%;
+ }
+
+ /* Результат вопроса--------------------------------------*/
+ /* Блокирующий экран--------------------------------------*/
+ .testpage_0002 .BlockLayer{ right: 0; left:0; top:70%; bottom:0; display: block;  position:absolute; background-color: white;
+   z-index: 7;  opacity: 0;  align-content: center;  align-items: center;  align-self: center;}
+
+ .testpage_0002>.QuestionResultDefault{
+   background-color: transparent;
+   border: 0px dotted grey;
+   z-index: 2;
+   display: grid;
+   grid-template-areas:
+     "adddiv adddiv"
+     "btnrepeat btngomainpage"
+     "picquestion picquestion"
+     "comment comment"
+     "result result";
+   grid-template-columns: 1fr 1fr;
+   position: absolute;
+   top:0;
+   left: 0;
+   transform: none;
+   padding: 0;
+   border: 0px dotted grey;
+   border-radius: 0px;
+   box-shadow: 0 0 0 rgba(0,0,0,0.5);
+   color:white;
+   font-weight: bold;
+   grid-column-gap: 1em;
+   align-self: center;
+   font-size: 2.3vmin;
+   align-items: center;
+   justify-items: center;
+   justify-self: stretch;
+   max-width: 146vh;
+   min-width: 80vw;
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   }
+@media (orientation: landscape) {.testpage_0002>.QuestionResultDefault{
+      background-image: url('https://api.electricalab.ru/images/system/million_back_h.jpg');
+      background-position: center top;  background-repeat: no-repeat;  background-size: auto 100vw;
+}
+.testpage_0002>.QuestionResultDefault>.result{  margin-bottom:  25vh;}
+}
+@media (orientation: portrait) {.testpage_0002>.QuestionResultDefault{
+       background-image: url('https://api.electricalab.ru/images/system/million_back_v.jpg');
+       background-position: center;  background-repeat: no-repeat;  background-size:  100vh auto;
+}
+.testpage_0002>.QuestionResultDefault>.result{  margin-bottom:  35vh;}
+}
+
+
+ .testpage_0002>.wrong{  background-color: red;}
+ .testpage_0002>.QuestionResultDefault>.picquestion{  grid-area: picquestion;  }
+ .testpage_0002>.QuestionResultDefault>.textquestion{grid-area:textquestion;}
+ .testpage_0002>.QuestionResultDefault>.picrightanswer{grid-area:picrightanswer;}
+ .testpage_0002>.QuestionResultDefault>.textrightanswer{grid-area:textrightanswer;}
+ .testpage_0002>.QuestionResultDefault>.picwronganswer{grid-area:picwronganswer;}
+ .testpage_0002>.QuestionResultDefault>.textwromganswer{grid-area:textwromganswer;}
+ .testpage_0002>.QuestionResultDefault>.result{ grid-area: result; font-size: 3em;
+  display: grid;
+  padding: 1px;
+  padding-left: 15%;
+  padding-right: 15%;
+  min-height: 2em;
+  align-items: center;
+  align-self: center;
+   justify-self:stretch;
+   justify-items:stretch;
+   background-image: url('https://api.electricalab.ru/images/system/questionmillioner.png');
+   background-position: center;  background-repeat: no-repeat;  background-size: 100% 100%;
+ }
+ .testpage_0002>.QuestionResultDefault>.result::after{content: attr(font-size)}
+ .testpage_0002>.QuestionResultDefault>.stat{ display: none;grid-area: stat; font-size: 2em; padding-bottom: 1vh;}
+
+ .testpage_0002>.QuestionResultDefault>.comment{
+   grid-area: comment;
+   text-align:justify;
+   padding: 2vmin;
+   background-color: white;
+   font-weight: normal;
+   color:black;
+   border-radius: 0px;
+   align-self:stretch;
+   max-height: 50vw;
+   overflow-y: scroll;
+ }
+
+ .testpage_0002>.QuestionResultDefault>.rightanswertext{display: none;grid-area:rightanswertext;}
+ .testpage_0002>.QuestionResultDefault>.wronganswertext{display: none;grid-area: wronganswertext;}
+ .testpage_0002>.QuestionResultDefault>.rightanswerpic{display: none;grid-area: rightanswerpic;}
+ .testpage_0002>.QuestionResultDefault>.wronganswerpic{display: none;grid-area: wronganswerpic;}
+
+ .testpage_0002>.QuestionResultDefault>.add_div1{
+ grid-area: adddiv;
+ margin-top: 5%;
+ height: 30vh;
+ width: 30vh;
+ z-index: 50;
+ background-color: transparent;
+ background-image: url('https://api.electricalab.ru/images/system/million_logo.png');
+ background-position: center;  background-repeat: no-repeat;  background-size: auto 100%;
+ }
+
+
+
+ /*Форма результата теста*/
+ .testpage_0002>.testres{
+   background-color: transparent;
+   border: 0px dotted grey;
+   display: grid;
+   z-index: 2;
+   margin: 0;
+   position: absolute;
+   top:0;
+   left: 0;
+   padding: 0;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-areas: "th th th" "btngomainpage adddiv btnrepeat" "sns sns sns"  "trs trs trs" "tsi tsi tsi" "tss tss tss" ;
+   color: black;
+   box-shadow: 0 0 0 rgba(55,55,55,1);
+   max-width: 146vh;
+   min-width: 80vw;
+   width: 100%;
+   height: 100%;
+   transform: none;
+   border: 0px dotted grey;
+   border-radius: 0px;
+   color:white;
+   justify-items:center;
+   font-weight: bold;
+   font-size: 2.3vmin;
+  }
+
+@media (orientation: landscape) {.testpage_0002>.testres{
+      background-image: url('https://api.electricalab.ru/images/system/million_back_h.jpg');
+      background-position: center top;  background-repeat: no-repeat;  background-size: auto 100vw;
+  }
+}
+@media (orientation: portrait) {.testpage_0002>.testres{
+       background-image: url('https://api.electricalab.ru/images/system/million_back_v.jpg');
+       background-position: center;  background-repeat: no-repeat;  background-size:  100vh auto;
+}
+}
+
+ .testpage_0002>.testres>.header      {display: none;grid-area:th;font-size: 3em; font-weight: 700;justify-self:center; }
+ .testpage_0002>.testres>.stat        {display: none;grid-area:ts;font-size: 2em; font-weight: 700; justify-self:right;}
+ .testpage_0002>.testres>.statpercent {display: none;grid-area:tsp;  font-size: 2em; font-weight: 700;justify-self:left;}
+ .testpage_0002>.testres>.statscore   {grid-area:tss;  font-size: 2em; font-weight: 700;justify-self:center;display: none; }
+ .testpage_0002>.testres>.statimg     {grid-area:tsi;  font-size: 2em; font-weight: 700;}
+ .testres>.snsharing   {grid-area:sns; font-size: 3em; font-weight: 700;}
+ .testpage_0002>.testres>.resumeString{
+   grid-area:trs;
+   display: grid;
+   font-size:2em;
+   background-image: url('https://api.electricalab.ru/images/system/questionmillioner.png');
+   background-position: center;  background-repeat: no-repeat;  background-size: 100% 100%;
+   padding-left: 15%;
+   padding-right: 15%;
+   color: white;
+   align-items: center;
+   padding-bottom: 1%;
+   justify-self:stretch;
+   margin-bottom: 25vh
+  }
+
+  .testpage_0002>.testres>.add_div1{
+  grid-area: adddiv;
+  height: 30vh;
+  width: 30vh;
+  background-color: transparent;
+  background-image: url('https://api.electricalab.ru/images/system/million_logo.png');
+  background-position: center;  background-repeat: no-repeat;  background-size: auto 100%;
+  }
+
+
+.testpage_0002>.testres>.testbtn{
+  font-size: 1em;
+  grid-area: btnrepeat;
+ background-color: transparent;
+  color: white;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 0px;
+  font-size: 1em;
+  height: 2em;
+  align-self: center;
+  align-items: center;
+  width: 80%;
+  height: 4.3em;
+  border: none;
+  background-image: url('https://api.electricalab.ru/images/system/million/banswer.png');
+  background-position: center;  background-repeat: no-repeat;  background-size: 174% 100%;
+/*
+  background-image: url('https://api.electricalab.ru/images/system/million_ans_orange.png');
+  background-position: center;  background-repeat: no-repeat;  background-size: 100% 100%; */
+}
+.testpage_0002>.testres>.testbtn:hover{color: black;background-color: transparent;
+  background-image: url('https://api.electricalab.ru/images/system/million/banswerright.png');
+  background-position: center;  background-repeat: no-repeat;  background-size: 175% 100%;
+  transform: scale(1.12);
+}
+.testpage_0002>.testres>.btnrepeat{grid-area: btnrepeat;justify-self: left;}
+.testpage_0002>.testres>.btnrepeat:hover{}
+.testpage_0002>.testres> .btngomainpage{ grid-area: btngomainpage; justify-self: right;}
+.testpage_0002>.testres>.btngomainpage:hover{}
+
+  .testpage_0002>.add_bs{
+    right: 0; left:0; top:70%; bottom:0; display: block;  position:absolute; background-color: white;
+      z-index: 170;  opacity: 0;  align-content: center;  align-items: center;  align-self: center;
+
+  }
+
+
+ .testpage_0002>.testres>.errors{ display: none; grid-area:er; }
+ .testpage_0002>.hide{display: none;}
+ .testpage_0002>.testres>.errors>.item{
+   grid-template-areas:
+     "n qi q  q"
+     "n qi ra wa" ;
+   grid-template-columns: 30px 150px 1fr 1fr;
+   background-color: orange;
+   padding: 5px;
+   border: 1px solid black;
+   display: grid;
+   grid-gap: 5px;
+   justify-self:stretch;
+   margin-top: 3px;
+ }
+
+.testpage_0002>.VolumeSettings{display:grid;position: absolute;z-index: 100; top: 2vh;left: 1vw;grid-template-columns: 1fr 1fr;grid-gap: 1em;align-self: center;align-items: center;}
+.testpage_0002>.VolumeSettings>.unmuted{padding: 5px; background-color: blue;}
+.testpage_0002>.VolumeSettings>.unmuted:hover{background-color: gray;}
+.testpage_0002>.VolumeSettings>.muted{padding: 5px;background-color: red;}
+.testpage_0002>.VolumeSettings>.muted:hover{background-color: gray;}
+.testpage_0002>.VolumeSettings>.volume{width: 2em}

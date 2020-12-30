@@ -16,5 +16,4 @@ yarn install
 ### Develop Web App
 
 - Run `yarn workspace @yest/web build` to build common package
-- Run `yarn workspace @yest/web build` to build common package
-- Run `yarn workspace @tr/common start:dev` to build common 
+- Run `yarn workspace @yest/web start` to start WEB common package

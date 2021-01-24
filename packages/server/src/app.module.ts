@@ -1,15 +1,14 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule} from '@nestjs/mongoose'
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { GraphQLModule } from '@nestjs/graphql'
-import { Tests } from './tests/tests.module'
+import { ProductsModule } from './products/products.module';
+
 @Module({
   imports: [
-    Tests,
-    GraphQLModule.forRoot({
-      typePaths:['./**/*.graphql'],
-      installSubscriptionHandlers:true,
-    }),
+    ProductsModule,
+    MongooseModule.forRoot(`mongodb+srv://pmiks:pmiks<password>@cluster0.uuftv.mongodb.net/products?retryWrites=true&w=majority`)
   ],
   controllers: [AppController],
   providers: [AppService],

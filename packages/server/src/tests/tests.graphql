@@ -1,0 +1,81 @@
+type Query {
+    getTests:[Test]
+    test[id:ID!]:Test
+}
+
+type Mutation {
+    createTest(createTestInput:CreateCatInput):Cat
+}
+
+type Subscription{
+    testCreated:Test
+}
+
+type Test {
+  addAlter:number
+  coverImage:string
+  editDate:string
+  defaultAnswer:string
+  defaultAnswerCount:number
+  defaultQuestion:string
+  isEndOnWrong:boolean
+  hashTags:string
+  id:number
+  isGame:boolean
+  isShowBackground:boolean
+  questLimit:number
+  isPublished:boolean
+  timeToShowQuestion:number
+  choiceCounter:number
+  defaultNumAns:string
+  questLimitInTest:string
+  isShuffleAnswer:boolean
+  isShuffleQuestion:boolean
+  testName:string
+  testLimitTime:number
+  countOfWrongAnswers:number
+  timeToShowQuestResult:number
+  isLevelGame:boolean
+  idType:number
+  userCreator:number
+  createDate:string
+  displayStyle:string
+  isDeleted:boolean
+  isEdited:boolean
+  isAdded:boolean
+  description:string
+}
+
+type CreateTestInput {
+  addAlter:number
+  coverImage:string
+  editDate:string
+  defaultAnswer:string
+  defaultAnswerCount:number
+  defaultQuestion:string
+  isEndOnWrong:boolean
+  hashTags:string
+  isGame:boolean
+  isShowBackground:boolean
+  questLimit:number
+  isPublished:boolean
+  timeToShowQuestion:number
+  choiceCounter:number
+  defaultNumAns:string
+  questLimitInTest:string
+  isShuffleAnswer:boolean
+  isShuffleQuestion:boolean
+  testName:string
+  testLimitTime:number
+  countOfWrongAnswers:number
+  timeToShowQuestResult:number
+  isLevelGame:boolean
+  idType:number
+  userCreator:number
+  createDate:string
+  displayStyle:string
+  isDeleted:boolean
+  isEdited:boolean
+  isAdded:boolean
+  description:string
+}
